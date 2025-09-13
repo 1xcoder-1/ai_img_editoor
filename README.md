@@ -1,11 +1,6 @@
 # Gemini 2.0 Flash Image Generation and Editing
 
-Nextjs quickstart for to generating and editing images with Google Gemini 2.0 Flash. It allows users to generate images from text prompts or edit existing images through natural language instructions, maintaining conversation context for iterative refinements. Try out the hosted demo at [Hugging Face Spaces](https://huggingface.co/spaces/philschmid/image-generation-editing).
-
-https://github.com/user-attachments/assets/8ffa5ee3-1b06-46a9-8b5e-761edb0e00c3
-
-Get your `GEMINI_API_KEY` key [here](https://ai.google.dev/gemini-api/docs/api-key) and start building.
-
+Nextjs quickstart for to generating and editing images with Google Gemini 2.0 Flash. It allows users to generate images from text prompts or edit existing images through natural language instructions, maintaining conversation context for iterative refinements. Try out the hosted demo at [Hugging Face Spaces]
 **How It Works:**
 
 1. **Create Images**: Generate images from text prompts using Gemini 2.0 Flash
@@ -92,11 +87,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-## Deployment
-
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgoogle-gemini%2Fgemini-image-editing-nextjs-quickstart&env=GEMINI_API_KEY&envDescription=Create%20an%20account%20and%20generate%20an%20API%20key&envLink=https%3A%2F%2Faistudio.google.com%2Fapp%2Fu%2F0%2Fapikey&demo-url=https%3A%2F%2Fhuggingface.co%2Fspaces%2Fphilschmid%2Fimage-generation-editing)
 
 ### Docker
 
@@ -126,7 +116,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Next.js](https://nextjs.org/) - React framework for the web application
 - [Google Gemini 2.0 Flash](https://deepmind.google/technologies/gemini/) - AI model for image generation and editing
 - [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built using Radix UI and Tailwind CSS
-
-## License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICENSE) file for details.
