@@ -1,6 +1,5 @@
-"use client";
-
 import { useCallback, useState, useEffect } from "react";
+import Image from "next/image";
 import { useDropzone } from "react-dropzone";
 import { Button } from "./ui/button";
 import { Upload as UploadIcon, Image as ImageIcon, X } from "lucide-react";
@@ -35,8 +34,8 @@ export function ImageUpload({ onImageSelect, currentImage, onError }: ImageUploa
   const onDrop = useCallback(
     (acceptedFiles: File[], fileRejections) => {
       if (fileRejections?.length > 0) {
-        const error = fileRejections[0].errors[0];
-        onError?.(error.message);
+        const fileError = fileRejections[0].errors[0];
+        onError?.(fileError.message);
         return;
       }
 
@@ -61,7 +60,7 @@ export function ImageUpload({ onImageSelect, currentImage, onError }: ImageUploa
       };
       reader.readAsDataURL(file);
     },
-    [onImageSelect]
+    [onImageSelect, onError]
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -130,11 +129,17 @@ export function ImageUpload({ onImageSelect, currentImage, onError }: ImageUploa
             </Button>
           </div>
           <div className="w-full overflow-hidden rounded-md">
-            <img
-              src={currentImage}
-              alt="Selected"
-              className="w-full h-auto object-contain"
-            />
+            {currentImage && (
+              <Image
+                src={currentImage}
+                alt="Selected"
+                width={512}
+                height={512}
+                className="w-full h-auto object-contain"
+                style={{ objectFit: "contain", width: "100%", height: "auto" }}
+                unoptimized
+              />
+            )}
           </div>
         </div>
       )}
